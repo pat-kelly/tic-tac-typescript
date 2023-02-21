@@ -1,0 +1,170 @@
+/* 
+  Tic Tac Toe - style.css
+  Due: 12 Dec. 2022
+  Coded by Patrick Kelly.
+*/
+
+@font-face {
+  font-family: hello-denver-bold;
+  src: url('../assets/hellodenverdisplaybold_v1.6.ttf');
+}
+
+body {
+  justify-content: center;
+	margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 2vh;
+  user-select: none;
+  background-image: url('../assets/ttt_vape_bg.png');
+  background-size:cover;
+  overflow-x: hidden;
+}
+
+.container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title{
+  font-family: 'monoton';
+  font-weight: 100; /*This stops chrome from mashing the letters' lines into a solid block letter.*/
+  font-size: 9vmin;
+  margin: 0;
+  background: linear-gradient(to top right, rgb(26, 26, 199), rgb(255, 0, 255));
+  background-clip:text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+#message{
+  font-family: poiret one, sans-sarif;
+  font-size: 4vmin;
+  margin-top: -1vmin;
+  color:white;
+}
+
+section.board {
+  display: grid;
+  grid-template-rows: repeat(3, 15vmin);
+  grid-template-columns: repeat(3, 15vmin);
+  grid-gap: 0vmin;
+  background: linear-gradient(to top right, rgb(255, 255, 0), rgb(246, 46, 149));
+  background-clip:text;
+  -webkit-background-clip: text;
+}
+
+div.sqr{
+  width:99%;
+  height:99%;
+  font-size: 8vmin;
+  text-align: center;
+  text-shadow:
+    0px 0px 10px rgb(246,46,151),
+    0px 0px 30px rgb(246,46,151);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: hello-denver-bold, sans-serif;
+  font-size: 15vmin;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.invalidMove:hover{
+  cursor:not-allowed;
+}
+
+.insideV {
+  border-left: 2px solid rgb(255, 255, 255);
+  border-right: 2px solid rgb(255, 255, 255);
+}
+
+.insideH {
+  border-top: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+#sqrW4{
+  border: 2px solid rgb(255, 255, 255);
+}
+
+#reset{
+  margin-top: 40px;
+  padding: 1vmin 2vmin;
+  font-size: 3vmin;
+  font-family: Montserrat;
+  background-color: rgba(21,60,180,.8);
+  border:none;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  box-shadow: 0px 5px 5px rgb(148, 22, 127);
+  color: white;
+}
+#reset:hover{
+  background-color: rgba(21,60,180,1);
+  cursor:pointer;
+}
+#reset:active{
+  box-shadow: inset 2px 2px 1px rgb(148,22,127)
+}
+
+.delorean{
+  position:relative;
+  z-index: -1;
+  width:50px;
+  display:flex;
+  left: -150px;
+}
+
+.delHide{
+  /* This might be depreciated */
+  display:none;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#d1{
+  top: -17vmin;
+  width: 25px;
+}
+#d2{
+  top:-15vmin;
+  width: 35px;
+}
+#d3{
+  top:-13vmin;
+}
+#d4{
+  top: -10vmin;
+  width: 65px;
+}
+#d5{
+  top:-8vmin;
+  width: 75px;
+}
+#d6{
+  top:-5vmin;
+  width: 90px;
+}
+#d7{
+  width: 100px;
+}
+
+#anim{
+  position:absolute;
+  top:5px;
+  right:5px;
+  font-size: 4vmin;
+}
+
+#anim:hover{
+  cursor: pointer;
+}
